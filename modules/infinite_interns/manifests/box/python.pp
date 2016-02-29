@@ -20,7 +20,12 @@ class infinite_interns::box::python {
       'jinja2',
       'pyzmq',
       'tornado',
-      'ipython'
+      'ipython',
+      'pdfminer',
+      'python-documentcloud',
+      'django',
+      'Flask',
+      'Flask-SQLAlchemy'
     ]: ensure   => latest,
        provider => 'pip';
   }
@@ -28,7 +33,9 @@ class infinite_interns::box::python {
   package {
     [
       'libxml2-dev',
-      'libxslt-dev'
+      'libxslt-dev',
+      'qpdf',
+      'sqlite3'
     ]: ensure => latest;
   }
 
